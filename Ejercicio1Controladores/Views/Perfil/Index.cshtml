@@ -1,0 +1,26 @@
+﻿<html>
+<head>
+    <title>Mi Perfil</title>
+</head>
+<body>
+    <h1>Mi Perfil</h1>
+
+    <form action="~/Perfil/Datos">
+        <label>Nombre:</label>
+        <input type="text" name="nombre"/><br />
+        <label>Carrera:</label>
+        <select name="carrera">
+            <option>Sistemas computacionales</option>
+            <option>Industrial</option>
+            <option>Electromecanica</option>
+        </select><br />
+        <label>Semestre</label>
+        <input name="semestre" type="number" min="1" max="9" /><br />
+        <label>Fecha de nacimiento:</label>
+        <input type="date" name="fechanacimiento"/><br />
+        
+        
+        <input type="submit" value="Enviar datos"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+@model System.Int32
+
+<html>
+<head>
+    <title>Tablas de multiplicar</title>
+</head>
+<body>
+
+
+
+    <h1>Tabla del @Model</h1>
+
+    <form action="~/Tablas/Index">
+        Seleccione:
+        <select name="id">
+            @for (int x = 1; x <= 10; x++)
+            {
+                @if (x == @Model)
+                {
+                    <option selected>@x</option>
+                }
+
+                else 
+                {
+                    <option>@x</option>
+                }
+
+            }
+        </select>
+        <input type="submit" value="Mostrar" />
+    </form>
+
+    <ul>
+        @for (int i = 1; i < 10; i++)
+        {
+            <li>@Model x @i = @(@Model * i)</li>
+        }
+    </ul>
+</body>
+</html>
